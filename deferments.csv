@@ -1,0 +1,10 @@
+-- Зависимая таблица: Отсрочки / Повестки (со ссылочной целостностью и каскадами)
+CREATE TABLE deferments (
+    deferment_id SERIAL PRIMARY KEY,
+    conscript_id INTEGER NOT NULL,
+    reason CHARACTER VARYING(100) NOT NULL,
+    end_date DATE NOT NULL,
+    FOREIGN KEY (conscript_id) REFERENCES conscripts (conscript_id)
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
+);
