@@ -1,0 +1,11 @@
+CREATE TABLE conscripts (
+    conscript_id SERIAL PRIMARY KEY,
+    last_name CHARACTER VARYING(50) NOT NULL,
+    first_name CHARACTER VARYING(50) NOT NULL,
+    middle_name CHARACTER VARYING(50),
+    birth_date DATE NOT NULL,
+    address CHARACTER VARYING(150),
+    phone CHARACTER VARYING(20),
+    education CHARACTER VARYING(100) NOT NULL,
+    marital_status CHARACTER VARYING(30) NOT NULL
+);
